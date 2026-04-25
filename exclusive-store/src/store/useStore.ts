@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { bestSellingProducts, exploreProducts, flashSaleProducts } from '../data/products';
 import type { CartItem, Product, User } from '../types';
 
 interface StoreState {
@@ -17,8 +18,12 @@ interface StoreState {
 }
 
 export const useStore = create<StoreState>((set, get) => ({
-  cart: [],
-  wishlist: [],
+  cart: [
+    { ...flashSaleProducts[0], quantity: 1 },
+    { ...bestSellingProducts[1], quantity: 2 },
+    { ...exploreProducts[2], quantity: 1 },
+  ],
+  wishlist: [flashSaleProducts[2], bestSellingProducts[0], exploreProducts[4]],
   user: null,
   isLoggedIn: false,
 

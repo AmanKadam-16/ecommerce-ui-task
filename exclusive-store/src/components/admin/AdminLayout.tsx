@@ -55,12 +55,12 @@ function AdminNavLink({
 
 function AdminSidebar() {
   return (
-    <aside className="fixed inset-y-0 left-0 z-20 hidden w-[260px] flex-col border-r border-slate-100 bg-white px-2 py-6 lg:flex">
-      <div className="mb-9 px-5 text-slate-500">
+    <aside className="fixed inset-y-0 left-0 z-20 hidden h-screen w-[260px] flex-col overflow-y-auto border-r border-slate-100 bg-white px-2 py-4 lg:flex">
+      <div className="mb-7 px-5 text-slate-500">
         <PanelLeft size={20} />
       </div>
 
-      <nav className="space-y-8">
+      <nav className="space-y-6">
         <div>
           <p className="mb-3 px-5 text-[15px] text-slate-500">Main menu</p>
           <div className="space-y-2 px-2">
@@ -70,14 +70,14 @@ function AdminSidebar() {
           </div>
         </div>
 
-        <div className="pt-14">
+        <div className="pt-4">
           <p className="mb-3 px-5 text-[15px] text-slate-500">Product</p>
           <div className="px-2">
             <AdminNavLink label="Add Products" to="/admin/add-product" icon={PackagePlus} />
           </div>
         </div>
 
-        <div className="pt-24">
+        <div className="pt-4">
           <p className="mb-3 px-5 text-[15px] text-slate-500">Admin</p>
           <div className="px-2">
             <AdminNavLink label="Admin role" to="/admin/profile" icon={CircleUserRound} />
@@ -85,7 +85,7 @@ function AdminSidebar() {
         </div>
       </nav>
 
-      <div className="mt-auto">
+      <div className="mt-auto pt-6">
         <div className="mb-5 flex items-center gap-3 px-4">
           <img
             src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=48&h=48&fit=crop"
