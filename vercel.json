@@ -1,0 +1,11 @@
+{
+  "installCommand": "cd exclusive-store && npm install",
+  "buildCommand": "cd exclusive-store && npm run build",
+  "outputDirectory": "exclusive-store/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
